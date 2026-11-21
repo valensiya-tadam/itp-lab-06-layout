@@ -2,12 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <!-- Мета-тег для корректной работы адаптивности на мобильных устройствах -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин кроссовок</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
 
+    <!-- Шапка сайта (Блок header по БЭМ) -->
     <header class="header">
         <a href="#" class="header__logo">SneakerShop</a>
         <nav class="nav">
@@ -17,12 +19,14 @@
     </header>
 
     <main class="main">
+        <!-- Hero-секция с фоновым изображением -->
         <section class="hero">
             <h1 class="hero__title">Новые кроссовки 2026</h1>
             <p class="hero__text">Удобная обувь для спорта и города</p>
             <a href="#catalog" class="button">В каталог</a>
         </section>
 
+        <!-- Сетка товаров (Блок catalog по БЭМ) -->
         <section class="catalog" id="catalog">
             <h2 class="catalog__title">Наши модели</h2>
 
@@ -58,6 +62,7 @@
         </section>
     </main>
 
+    <!-- Подвал сайта -->
     <footer class="footer" id="contacts">
         <p class="footer__text">&copy; 2026 SneakerShop</p>
     </footer>

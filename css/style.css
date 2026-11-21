@@ -1,3 +1,4 @@
+/* CSS-переменные для основных цветов */
 :root {
     --bg: #f4f4f4;
     --white: #ffffff;
@@ -6,6 +7,7 @@
 }
 
 * {
+    /* Включает padding и border в общую ширину и высоту элемента */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -16,10 +18,12 @@
     background-color: var(--bg);
     color: var(--text);
     min-height: 100vh;
+    /* Общая сетка страницы: шапка, контент (растягивается), подвал */
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
 
+/* Анимация плавного появления карточек */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -34,6 +38,7 @@
 .header {
     background-color: var(--white);
     padding: 15px 20px;
+    /* Базовая сетка шапки для мобильных (1 колонка) */
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
@@ -48,6 +53,7 @@
 }
 
 .nav {
+    /* Выравнивание пунктов меню в ряд через Flexbox */
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -59,12 +65,14 @@
 }
 
 .hero {
+    /* Фоновое изображение для Hero-секции */
     background-image: url('../img/hero.jpg');
     background-size: cover;
     background-position: center;
     background-color: #333333;
     color: var(--white);
     padding: 60px 20px;
+    /* Центрирование текста и кнопки через Flexbox */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,6 +81,7 @@
 }
 
 .hero__title {
+    /* Адаптивный размер шрифта с помощью clamp() */
     font-size: clamp(24px, 5vw, 42px);
 }
 
@@ -94,6 +103,7 @@
 }
 
 .catalog__grid {
+    /* Адаптивная Grid-сетка с автоматическим заполнением колонок */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
@@ -103,6 +113,7 @@
     background-color: var(--white);
     padding: 15px;
     border-radius: 8px;
+    /* Вертикальный Flexbox для выравнивания содержимого карточки */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -111,6 +122,7 @@
 
 .card__img {
     width: 100%;
+    /* Фиксированное соотношение сторон изображений */
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 5px;
@@ -122,6 +134,7 @@
 
 .card__price {
     font-weight: bold;
+    /* Прижимает цену и кнопку к нижней границе карточки */
     margin-top: auto;
 }
 
@@ -144,8 +157,10 @@
     padding: 15px;
 }
 
+/* Медиазапрос для планшетов и десктопов (Mobile First) */
 @media (min-width: 768px) {
     .header {
+        /* Логотип занимает место по содержимому (max-content), меню — остальное */
         grid-template-columns: max-content 1fr;
         align-items: center;
         text-align: left;
